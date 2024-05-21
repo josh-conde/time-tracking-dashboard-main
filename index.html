@@ -5,76 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" type="module" defer></script>
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+<div class="heading-container">
 
-  Report for
-  Jeremy Robson
+</div>
+<div class="main-container">
+  <div class="title-card">
+    <div class="top-container">
+      <img src="images/image-jeremy.png" alt="Image of Jeremy Robson">
+      <p>Report for</p>
+      <h1>Jeremy Robson</h1>
+    </div>
+    <div class="bottom-container">
+      <ul>
+        <li class="daily-selector selector">Daily</li>
+        <li class="weekly-selector selector">Weekly</li>
+        <li class="monthly-selector selector">Monthly</li>
+      </ul>
+    </div>
+  </div>
 
-  Daily
-  Weekly
-  Monthly
+  <div class="work-card card">
+    <div class="top-card">
+      <img src="images/icon-work.svg" alt="Briefcase Icon">
+    </div>
+    <div class="bottom-card">
+      <h2>Work</h2>
+      <img src="images/icon-ellipsis.svg" alt="Ellipses">
+      <h3 class="daily">5hrs</h3>
+      <h3 class="weekly hidden">32hrs</h3>
+      <h3 class="monthly hidden">103hrs</h3>
+      <p class="daily">Yesterday - 7hrs</p>
+      <p class="weekly hidden">Last Week - 36hrs</p>
+      <p class="monthly hidden">Last Month - 128hrs</p>
+    </div>
+  </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+  <div class="play-card card">
+    <div class="top-card">
+      <img src="images/icon-play.svg" alt="Controller Icon">
+    </div>
+    <div class="bottom-card">
+      <h2>Play</h2>
+      <img src="images/icon-ellipsis.svg" alt="Ellipses">
+      <h3 class="daily">1hr</h3>
+      <h3 class="weekly hidden">10hrs</h3>
+      <h3 class="monthly hidden">23hrs</h3>
+      <p class="daily">Yesterday - 2hrs</p>
+      <p class="weekly hidden">Last Week - 8hrs</p>
+      <p class="monthly hidden">Last Month - 29hrs</p>
+    </div>
+  </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+  <div class="study-card card">
+    <div class="top-card">
+      <img src="images/icon-study.svg" alt="Book Icon">
+    </div>
+    <div class="bottom-card">
+      <h2>Study</h2>
+      <img src="images/icon-ellipsis.svg" alt="Ellipses">
+      <h3 class="daily">0hrs</h3>
+      <h3 class="weekly hidden">4hrs</h3>
+      <h3 class="monthly hidden">13hrs</h3>
+      <p class="daily">Yesterday - 1hr</p>
+      <p class="weekly hidden">Last Week - 7hrs</p>
+      <p class="monthly hidden">Last Month - 19hrs</p>
+    </div>
+  </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+  <div class="exercise-card card">
+    <div class="top-card">
+      <img src="images/icon-exercise.svg" alt="Running Icon">
+    </div>
+    <div class="bottom-card">
+      <h2>Exercise</h2>
+      <img src="images/icon-ellipsis.svg" alt="Ellipses">
+      <h3 class="daily">1hr</h3>
+      <h3 class="weekly hidden">4hrs</h3>
+      <h3 class="monthly hidden">11hrs</h3>
+      <p class="daily">Yesterday - 1hrs</p>
+      <p class="weekly hidden">Last Week - 5hrs</p>
+      <p class="monthly hidden">Last Month - 18hrs</p>
+    </div>
+  </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+  <div class="social-card card">
+    <div class="top-card">
+      <img src="images/icon-social.svg" alt="Conversation Bubbles Icon">
+    </div>
+    <div class="bottom-card">
+      <h2>Social</h2>
+      <img src="images/icon-ellipsis.svg" alt="Ellipses">
+      <h3 class="daily">1hr</h3>
+      <h3 class="weekly hidden">5hrs</h3>
+      <h3 class="monthly hidden">21hrs</h3>
+      <p class="daily">Yesterday - 3hrs</p>
+      <p class="weekly hidden">Last Week - 10hrs</p>
+      <p class="monthly hidden">Last Month - 23hrs</p>
+    </div>
+  </div>
+  
+  <div class="selfcare-card card">
+    <div class="top-card">
+      <img src="images/icon-self-care.svg" alt="Conversation Bubbles Icon">
+    </div>
+    <div class="bottom-card">
+      <h2>Self Care</h2>
+      <img src="images/icon-ellipsis.svg" alt="Ellipses">
+      <h3 class="daily">0hrs</h3>
+      <h3 class="weekly hidden">2hrs</h3>
+      <h3 class="monthly hidden">7hrs</h3>
+      <p class="daily">Yesterday - 1hr</p>
+      <p class="weekly hidden">Last Week - 2hrs</p>
+      <p class="monthly hidden">Last Month - 11hrs</p>
+    </div>
+  </div>
+  
+</div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Joshua Conde</a>.
   </div>
 </body>
 </html>
