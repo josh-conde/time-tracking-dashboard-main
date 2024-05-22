@@ -47,7 +47,6 @@ h2 {
 h3 {
     font-weight: 300;
     font-size: 2.1rem;
-
 }
 
 .hidden {
@@ -55,7 +54,7 @@ h3 {
 }
 
 .visible {
-    display: inline-block;
+    display: block;
 }
 
 .heading-container {
@@ -104,6 +103,7 @@ h3 {
     height: 225px;
     padding: 25px 10px;
     line-height: 4;
+    position: relative;
 }
 
 .card {
@@ -128,11 +128,22 @@ h3 {
     width: 200px;
     max-width: 100%;
     height: 250px;
+    position: relative;
+}
+
+.bottom-card:hover {
+    background-color:hsl(228, 45%, 44%);
+    cursor: pointer;
 }
 
 .bottom-card img {
     width: 15px;
     justify-self: end;
+}
+
+.bottom-card img:hover {
+    color: #fff;
+    background-color: #fff;;
 }
 
 .bottom-card p {
@@ -148,23 +159,28 @@ h3 {
     display: flex;
     justify-content: end;
     overflow: hidden;
-
 }
+
 .work-card .top-card {
     background-color: hsl(15, 100%, 70%);
 }
+
 .play-card .top-card {
     background-color: hsl(195, 74%, 62%);
 }
+
 .study-card .top-card {
     background-color: hsl(348, 100%, 68%);
 }
+
 .exercise-card .top-card {
     background-color: hsl(145, 58%, 55%);
 }
+
 .social-card .top-card {
     background-color: hsl(264, 64%, 52%);
 }
+
 .selfcare-card .top-card {
     background-color: hsl(43, 84%, 65%);
 }
@@ -174,11 +190,45 @@ h3 {
     color: hsl(236, 100%, 87%);
 }
 
-.selector:active {
-    color: hsl(235, 45%, 61%);
+.selector.active, .selector:hover {
+    color: #fff;
 }
 
-.selector:hover {
-    color: #fff;
-    transition: ease-in 1.5sec;
+@media (max-width: 375px) {
+    .heading-container {
+        margin-bottom: 30px;
+    }
+
+    .main-container {
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .title-card {
+        grid-row: 1 / span 0;
+        width: 300px;
+        
+    }
+
+    .bottom-container li {
+        display: inline;
+        padding: 0 10px;
+    }
+
+    .bottom-container ul {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .card {
+        width: 300px;
+    }
+
+    .bottom-card {
+        width: 300px;
+    }
+
+    .attribution, .attribution a {
+        display: none;
+    }
 }
